@@ -20,72 +20,164 @@
 <meta name="twitter:description" content="Focused commerce back-office tools: DATEV-Export, EU Compliance Kit, CutSheetPro and Buchungsstapel.">
 <meta name="twitter:image" content="https://justarobot.online/og.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Universal Exporters","url":"https://justarobot.online","logo":"https://justarobot.online/datev.png","sameAs":["https://github.com/justarob0x"],"address":{"@type":"PostalAddress","streetAddress":"10006 Rolke Rd","addressLocality":"Houston","addressRegion":"TX","postalCode":"77099","addressCountry":"US"}}</script>
+<link rel="preload" href="fonts/ibm-plex-sans-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  :root { --ink:#1a1a1a; --muted:#5c5f62; --line:#e3e5e7; --bg:#f6f6f7; --card:#fff; --green:#0f5c48; }
-  * { box-sizing:border-box }
-  body { margin:0; font:16px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg) }
-  main { max-width:880px; margin:0 auto; padding:56px 24px 40px }
-  h1 { font-size:2rem; margin:0 0 .25rem }
-  .lede { color:var(--muted); margin:0 0 40px; font-size:1.1rem }
-  .apps { display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)) }
-  .app { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; display:flex; flex-direction:column; gap:10px }
-  .app img { width:56px; height:56px; border-radius:14px; border:2px solid #384850 }
-  .app h2 { font-size:1.15rem; margin:4px 0 0 }
-  .app p { margin:0; color:var(--muted); flex:1 }
-  .app a { color:var(--green); font-weight:600; text-decoration:none }
-  .app a:hover { text-decoration:underline }
-  .app small { color:var(--muted) }
-  h3 { font-size:1rem; margin:44px 0 8px }
-  footer { border-top:1px solid var(--line); margin-top:48px; padding-top:20px; color:var(--muted); font-size:.9rem }
-  footer a { color:inherit }
+  /* Self-hosted (latin subset, OFL). Plex Sans is a variable file: one request covers 400 to 600. */
+  @font-face { font-family: "IBM Plex Sans"; font-style: normal; font-weight: 400 600; font-display: swap; src: url("fonts/ibm-plex-sans-normal.woff2") format("woff2"); }
+  @font-face { font-family: "IBM Plex Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/ibm-plex-mono-normal-400.woff2") format("woff2"); }
+
+  /* Paper and ink, cold. One accent: the green the apps already share. */
+  :root {
+    --canvas: #F3F4F2; --surface: #FFFFFF;
+    --ink: #17201C; --ink-soft: #5A6660;
+    --accent: #0F5C48; --accent-ink: #F3F4F2;
+    --hair: rgba(23, 32, 28, 0.12); --hair-strong: rgba(23, 32, 28, 0.24);
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+    --gutter: clamp(1.25rem, 5vw, 4rem);
+    --measure: 62ch;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--canvas); }
+  body { margin: 0; background: var(--canvas); color: var(--ink); font: 400 clamp(1rem, 0.96rem + 0.22vw, 1.125rem)/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.14em; }
+  a:hover { text-decoration-thickness: 2px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  h1, h2, h3, p { margin: 0; }
+  .wrap { max-width: 68rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  /* Masthead */
+  .mast { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-top: 1.5rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  .mast a { color: inherit; text-decoration: none; }
+  .mast a:hover { color: var(--accent); }
+
+  /* Title */
+  .title { padding-block: clamp(3.5rem, 10vh, 7rem) clamp(2.5rem, 6vh, 4rem); display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1.5rem 4rem; align-items: end; }
+  .title h1 { grid-column: 1 / -1; font-size: clamp(2.4rem, 1.5rem + 4.4vw, 5.2rem); font-weight: 600; line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; max-width: 16ch; }
+  .title .lede { font-size: clamp(1.15rem, 1.05rem + 0.5vw, 1.45rem); line-height: 1.4; letter-spacing: -0.01em; max-width: 30ch; text-wrap: pretty; }
+  .title .aside { color: var(--ink-soft); font-size: 0.95rem; max-width: 36ch; text-wrap: pretty; }
+
+  /* The index: one row per tool, not four identical cards. */
+  .index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hair-strong); }
+  .tool { display: grid; grid-template-columns: 3.5rem minmax(0, 7fr) minmax(0, 4fr); gap: 0.5rem 1.5rem; align-items: start; padding: 1.75rem 0; border-bottom: 1px solid var(--hair); }
+  .tool__icon { width: 3rem; height: 3rem; border-radius: 12px; border: 1px solid var(--hair-strong); background: var(--surface); display: block; }
+  .tool h2 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.25; }
+  .tool h2 a { color: var(--ink); text-decoration: none; }
+  .tool h2 a:hover { color: var(--accent); }
+  .tool p { color: var(--ink-soft); max-width: var(--measure); text-wrap: pretty; margin-top: 0.35rem; }
+  .tool__meta { font-family: var(--mono); font-size: 0.8rem; line-height: 1.7; color: var(--ink-soft); display: grid; gap: 0.15rem; }
+  .tool__meta b { font-weight: 400; color: var(--ink); }
+  .tool__meta a { color: var(--accent); text-decoration: none; }
+  .tool__meta a:hover { text-decoration: underline; }
+  .tool__meta .k { display: inline-block; min-width: 5.5em; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.7rem; }
+
+  /* Support and plate */
+  .support { padding-block: 3rem 0; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 1rem 4rem; }
+  .support h3 { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); font-weight: 400; margin-bottom: 0.5rem; }
+  .support p { color: var(--ink-soft); max-width: var(--measure); text-wrap: pretty; }
+  .plate { margin-top: 4rem; padding-block: 1.5rem 3rem; border-top: 1px solid var(--hair-strong); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.9rem; color: var(--ink-soft); }
+  .plate a { color: var(--ink-soft); text-decoration: none; }
+  .plate a:hover { color: var(--accent); }
+
+  @media (max-width: 760px) {
+    .title, .support { grid-template-columns: 1fr; gap: 1.25rem; }
+    .tool { grid-template-columns: 2.75rem minmax(0, 1fr); }
+    .tool__icon { width: 2.5rem; height: 2.5rem; border-radius: 10px; }
+    .tool__meta { grid-column: 2; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .tool h2 a, .tool__meta a, .mast a, .plate a { transition: color 140ms cubic-bezier(0.23, 1, 0.32, 1); }
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>Universal Exporters</h1>
-  <p class="lede">Small, focused apps that do one compliance or back-office job properly — and nothing else.</p>
+<div class="wrap">
+  <header class="mast">
+    <span>Universal Exporters LLC</span>
+    <a href="mailto:support@justarobot.online">support@justarobot.online</a>
+  </header>
 
-  <section class="apps">
-    <article class="app">
-      <img src="datev.png" alt="">
-      <h2>DATEV-Export</h2>
-      <p>Orders and refunds as a monthly DATEV posting batch (EXTF) for the merchant's German tax advisor. SKR03/SKR04, OSS, refunds, gift cards.</p>
-      <small>German-language app · EU hosting</small>
-      <a href="https://datev.justarobot.online">datev.justarobot.online</a>
-    </article>
+  <main>
+    <section class="title">
+      <h1>Four tools. Each does one back-office job properly.</h1>
+      <p class="lede">Small, focused apps for commerce compliance and bookkeeping. Nothing else bolted on.</p>
+      <p class="aside">Three are Shopify apps, one is a web app for German tax advisors. Each has its own site, support address, privacy policy and terms.</p>
+    </section>
 
-    <article class="app">
-      <img src="eucompliance.png" alt="">
-      <h2>EU Compliance Kit</h2>
-      <p>Omnibus 30-day prior prices on sale items and the GPSR product-safety details EU storefronts have to show.</p>
-      <small>English · EU hosting</small>
-      <a href="https://eucompliance.justarobot.online">eucompliance.justarobot.online</a>
-    </article>
+    <ul class="index">
+      <li class="tool">
+        <img class="tool__icon" src="datev.png" alt="" width="48" height="48">
+        <div>
+          <h2><a href="https://datev.justarobot.online">DATEV-Export</a></h2>
+          <p>Orders and refunds as a monthly DATEV posting batch (EXTF) for the merchant's German tax advisor. SKR03/SKR04, OSS, refunds, gift cards.</p>
+        </div>
+        <div class="tool__meta">
+          <span><span class="k">Type</span><b>Shopify app</b></span>
+          <span><span class="k">Language</span><b>German</b></span>
+          <span><span class="k">Hosting</span><b>EU</b></span>
+          <span><span class="k">Site</span><a href="https://datev.justarobot.online">datev.justarobot.online</a></span>
+        </div>
+      </li>
 
-    <article class="app">
-      <img src="buchungsstapel.png" alt="">
-      <h2>Buchungsstapel</h2>
-      <p>For German tax advisors: clients upload their shop's monthly order export (CSV) through a link, the DATEV posting batch (EXTF) arrives by mail with every gap flagged. Nothing stored. Kanzlei plan for many clients; further shop platforms on request.</p>
-      <small>German-language web app · EU hosting</small>
-      <a href="https://buchungsstapel.de">buchungsstapel.de</a>
-    </article>
+      <li class="tool">
+        <img class="tool__icon" src="eucompliance.png" alt="" width="48" height="48">
+        <div>
+          <h2><a href="https://eucompliance.justarobot.online">EU Compliance Kit</a></h2>
+          <p>Omnibus 30-day prior prices on sale items and the GPSR product-safety details EU storefronts have to show.</p>
+        </div>
+        <div class="tool__meta">
+          <span><span class="k">Type</span><b>Shopify app</b></span>
+          <span><span class="k">Language</span><b>English</b></span>
+          <span><span class="k">Hosting</span><b>EU</b></span>
+          <span><span class="k">Site</span><a href="https://eucompliance.justarobot.online">eucompliance.justarobot.online</a></span>
+        </div>
+      </li>
 
-    <article class="app">
-      <img src="cutsheet.png" alt="">
-      <h2>CutSheetPro</h2>
-      <p>Sell beef, hog and lamb shares: deposits, cut sheets and hanging-weight billing for farms and butchers.</p>
-      <small>English</small>
-      <a href="https://cutsheet.justarobot.online">cutsheet.justarobot.online</a>
-    </article>
-  </section>
+      <li class="tool">
+        <img class="tool__icon" src="buchungsstapel.png" alt="" width="48" height="48">
+        <div>
+          <h2><a href="https://buchungsstapel.de">Buchungsstapel</a></h2>
+          <p>For German tax advisors: clients upload their shop's monthly order export (CSV) through a link, the DATEV posting batch (EXTF) arrives by mail with every gap flagged. Nothing stored. Kanzlei plan for many clients; further shop platforms on request.</p>
+        </div>
+        <div class="tool__meta">
+          <span><span class="k">Type</span><b>Web app</b></span>
+          <span><span class="k">Language</span><b>German</b></span>
+          <span><span class="k">Hosting</span><b>EU</b></span>
+          <span><span class="k">Site</span><a href="https://buchungsstapel.de">buchungsstapel.de</a></span>
+        </div>
+      </li>
 
-  <h3>Support</h3>
-  <p>Each app has its own support page and address. General enquiries: <a href="mailto:support@justarobot.online">support@justarobot.online</a>.</p>
+      <li class="tool">
+        <img class="tool__icon" src="cutsheet.png" alt="" width="48" height="48">
+        <div>
+          <h2><a href="https://cutsheet.justarobot.online">CutSheetPro</a></h2>
+          <p>Sell beef, hog and lamb shares: deposits, cut sheets and hanging-weight billing for farms and butchers.</p>
+        </div>
+        <div class="tool__meta">
+          <span><span class="k">Type</span><b>Shopify app</b></span>
+          <span><span class="k">Language</span><b>English</b></span>
+          <span><span class="k">Site</span><a href="https://cutsheet.justarobot.online">cutsheet.justarobot.online</a></span>
+        </div>
+      </li>
+    </ul>
 
-  <footer>
-    Universal Exporters LLC · 10006 Rolke Rd, Houston, TX 77099, United States · <a href="https://github.com/justarob0x">GitHub</a><br>
-    Privacy policies and terms are published per app on the app's own site.
+    <section class="support">
+      <div>
+        <h3>Support</h3>
+        <p>Each app has its own support page and address. General enquiries: <a href="mailto:support@justarobot.online">support@justarobot.online</a>.</p>
+      </div>
+      <div>
+        <h3>Policies</h3>
+        <p>Privacy policies and terms are published per app on the app's own site.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="plate">
+    <span>Universal Exporters LLC</span>
+    <span>10006 Rolke Rd, Houston, TX 77099, United States</span>
+    <a href="https://github.com/justarob0x">GitHub</a>
   </footer>
-</main>
+</div>
 </body>
 </html>
