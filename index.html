@@ -72,7 +72,8 @@
   .tool__meta .k { display: inline-block; min-width: 5.5em; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.7rem; }
   /* Shopify mark next to "Shopify app" (simple-icons path, brand green); the symbol sits once at the top of <body> */
   .tool__meta .brand { display: inline-block; width: 13px; height: 13px; vertical-align: -1.5px; margin-right: 0.4em; color: #7AB55C; }
-  /* Wix is a wordmark, not a glyph: 24×9.29 viewBox, so it needs its own width at the same 13px cap height */
+  /* Wix is a wordmark, not a glyph: 24×9.29 viewBox, so it needs its own width at the same 13px cap height.
+     It also replaces the word rather than preceding it, so unlike .brand it carries an aria-label instead of aria-hidden. */
   .tool__meta .brand--wix { width: 34px; height: 13px; vertical-align: -2px; color: #0C6EFC; }
 
   /* Support and plate */
@@ -131,7 +132,7 @@
           <p>Omnibus 30-day prior prices on sale items and the GPSR product-safety details EU storefronts have to show.</p>
         </div>
         <div class="tool__meta">
-          <span><span class="k">Type</span><b><svg class="brand" aria-hidden="true"><use href="#shopify"/></svg>Shopify app · <svg class="brand brand--wix" aria-hidden="true"><use href="#wix"/></svg>Wix app</b></span>
+          <span><span class="k">Type</span><b><svg class="brand" aria-hidden="true"><use href="#shopify"/></svg>Shopify app · <svg class="brand brand--wix" role="img" aria-label="Wix"><use href="#wix"/></svg>app</b></span>
           <span><span class="k">Language</span><b>English</b></span>
           <span><span class="k">Hosting</span><b>EU</b></span>
           <span><span class="k">Site</span><a href="https://eucompliance.justarobot.online">eucompliance.justarobot.online</a></span>
