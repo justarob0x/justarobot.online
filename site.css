@@ -57,6 +57,7 @@ h1, h2, h3, p { margin: 0; }
 .tool__meta .brand--shopware { color: #189EFF; }
 .tool__meta .brand--etsy { width: 11px; color: #F16521; }
 .tool__meta .brand--kaufland { color: #E10915; }
+.tool__meta .brand--ebay { width: 33px; height: 13px; vertical-align: -2px; color: #E53238; }
 /* Install buttons for the app-market listings: the page's only buttons, so they stay quiet. */
 .tool__meta .install { display: inline-block; padding: 0.15rem 0.65rem; border: 1px solid var(--accent); border-radius: 999px; color: var(--accent); text-decoration: none; line-height: 1.6; }
 .tool__meta .install:hover { background: var(--accent); color: #fff; text-decoration: none; }
