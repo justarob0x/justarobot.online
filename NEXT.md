@@ -16,8 +16,10 @@
 1. Shopify verdict (~15–16 Oct): EU Kit card "on Wix" → "on Wix and Shopify" for green claims + passports; add
    Shopify install link. Green-claims section on eucompliance.justarobot.online goes out with the Shopify
    merge/deploy (same Railway service as the app under review).
-2. Google Marketplace + Microsoft certification: add E-Rechnung install links here, on erechnung.justarobot.online and
-   in the Wissen articles, in one change.
+2. Google Marketplace approved 13 Oct: "Add to Google Sheets" link + body link on the E-Rechnung card (EN + DE) live
+   14 Oct. Still open: Microsoft AppSource link once certified; Google link on erechnung.justarobot.online + Wissen.
+4. Buchungsstapel G2 profile (listed 12 Oct): g2.com blocks curl (403), URL unverified — add a link once Bill
+   confirms the profile URL.
 3. EPR report (App Store review): add a card + icon once approved.
 
 **Gotchas**
