@@ -5,7 +5,8 @@
 BMD-Export (Austrian Shopify app, approved 15 Oct) card EN + DE after Export für DATEV: BMD NTCS / RZL, EKR, listing
 https://apps.shopify.com/bmd-export-2 and walkthrough https://youtu.be/FppHEJGvU10; icon `bmd.png` (192, from
 datev-export `docs/listing/icon-bmd.png`). Meta/OG/Twitter descriptions name it; aside "two are Shopify apps".
-OPEN: og.png still has 5 icons (no BMD) — re-render.
+og.png re-rendered 15 Oct: 6 icons (DATEV, BMD, EU Kit, Buchungsstapel, E-Rechnung, CutSheetPro) + names line
+("Export für DATEV", old "DATEV-Export" fixed); source HTML in the datev-export session scratchpad `og/og.html`.
 
 ## 2026-10-13 — App cards updated for E-Rechnung, green claims, product passports (STATUS: live; pass 2 waits on store verdicts)
 
