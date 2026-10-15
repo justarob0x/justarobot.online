@@ -1,5 +1,12 @@
 # NEXT — justarobot.online (developer site, GitHub Pages)
 
+## 2026-10-15 — BMD-Export card (STATUS: live, 2dc87d2)
+
+BMD-Export (Austrian Shopify app, approved 15 Oct) card EN + DE after Export für DATEV: BMD NTCS / RZL, EKR, listing
+https://apps.shopify.com/bmd-export-2 and walkthrough https://youtu.be/FppHEJGvU10; icon `bmd.png` (192, from
+datev-export `docs/listing/icon-bmd.png`). Meta/OG/Twitter descriptions name it; aside "two are Shopify apps".
+OPEN: og.png still has 5 icons (no BMD) — re-render.
+
 ## 2026-10-13 — App cards updated for E-Rechnung, green claims, product passports (STATUS: live; pass 2 waits on store verdicts)
 
 **DONE / LIVE** (d7e78cb, 8be465d, pushed = deployed by GitHub Pages in ~1–2 min)
