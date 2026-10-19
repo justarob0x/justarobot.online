@@ -1,5 +1,15 @@
 # NEXT — justarobot.online (developer site, GitHub Pages)
 
+## 2026-10-19 — LUCID Verpackungsgesetz Report card (STATUS: live, 46fb820 + og 988268d)
+
+EPR app (approved + published 19 Oct) card EN + DE after BMD-Export: packaging quantities for LUCID (VerpackG) and ARA
+from shipped Shopify orders, CSV/PDF, $11.99/month + 14-day trial; listing
+https://apps.shopify.com/lucid-verpackungsgesetz-report (DE card links the same URL, like BMD) and demo
+https://youtu.be/FDCi8ZxmkYo; site epr.justarobot.online; icon `lucid.png` (192, from epr-report
+`docs/listing/icon-1200.png`). Meta/OG/Twitter descriptions name it; aside "three are Shopify apps"; sitemap 2026-10-19.
+og.png re-rendered: 7 icons at 126px (DATEV, BMD, LUCID, EU Kit, Buchungsstapel, E-Rechnung, CutSheetPro), names line
+wraps to two lines; source HTML in the epr-report session scratchpad `og/og.html`. Closes pass-2 item 3 below.
+
 ## 2026-10-15 — BMD-Export card (STATUS: live, 2dc87d2)
 
 BMD-Export (Austrian Shopify app, approved 15 Oct) card EN + DE after Export für DATEV: BMD NTCS / RZL, EKR, listing
