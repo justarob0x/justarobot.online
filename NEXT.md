@@ -31,7 +31,8 @@ og.png re-rendered 15 Oct: 6 icons (DATEV, BMD, EU Kit, Buchungsstapel, E-Rechnu
   (old one cut its text off and had the old EU icon). Sitemap lastmod 2026-10-13.
 
 **OPEN — pass 2 (waiting on others)**
-1. Shopify verdict (~15–16 Oct): EU Kit card "on Wix" → "on Wix and Shopify" for green claims + passports; add
+1. DONE 20 Oct (d60079a): EU Kit card now ten rules (nine on Wix), Shopify install link + pricing + price fix /
+   email alert / PDF record; green claims + passports stay Wix-only (the Shopify app has neither). Was: Shopify verdict (~15–16 Oct): EU Kit card "on Wix" → "on Wix and Shopify" for green claims + passports; add
    Shopify install link. Green-claims section on eucompliance.justarobot.online goes out with the Shopify
    merge/deploy (same Railway service as the app under review).
 2. Google Marketplace approved 13 Oct: "Add to Google Sheets" link + body link on the E-Rechnung card (EN + DE) live
