@@ -1,5 +1,11 @@
 # NEXT — justarobot.online (developer site, GitHub Pages)
 
+## 2026-10-31 — Spanish page /es/ (STATUS: live on push)
+
+`es/index.html` (lang es, formal usted): EU Compliance Kit card first and in full (links eucompliance /es and /es/reglas, facts
+copied from the EN card); DATEV/BMD/LUCID/Buchungsstapel/plugin/E-Rechnung/CutSheetPro as short neutral cards. hreflang es +
+og:locale es_ES + "Español" switcher on EN and DE; Kit language row adds Spanish on all three; sitemap 2026-10-31 with /es/.
+
 ## 2026-10-19 — LUCID Verpackungsgesetz Report card (STATUS: live, 46fb820 + og 988268d)
 
 EPR app (approved + published 19 Oct) card EN + DE after BMD-Export: packaging quantities for LUCID (VerpackG) and ARA
