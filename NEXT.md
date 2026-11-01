@@ -1,5 +1,11 @@
 # NEXT — justarobot.online (developer site, GitHub Pages)
 
+## 2026-11-01 — Italian page /it/ (STATUS: ready, not yet pushed)
+
+`it/index.html` (lang it, informal tu, translated from es): EU Compliance Kit card first and in full (links eucompliance /it and
+/it/regole); DATEV/BMD/LUCID/Buchungsstapel/plugin/E-Rechnung/CutSheetPro as short neutral cards. hreflang it + og:locale it_IT +
+"Italiano" switcher on EN, DE and ES; Kit language row adds Italian on all four; sitemap 2026-11-01 with /it/.
+
 ## 2026-10-31 — Spanish page /es/ (STATUS: live on push)
 
 `es/index.html` (lang es, formal usted): EU Compliance Kit card first and in full (links eucompliance /es and /es/reglas, facts
