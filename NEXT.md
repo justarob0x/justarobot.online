@@ -1,5 +1,12 @@
 # NEXT — justarobot.online (developer site, GitHub Pages)
 
+## 2026-11-04 — Variable W&C card, marked "in review" (STATUS: live on push)
+
+Card after CutSheetPro on EN/DE (full) and ES/IT (short): sell by weight, lighter refunded / heavier invoiced separately,
+$20 / 30 days, 14-day trial; meta row "Status: In Shopify review", no install link; site weight.justarobot.online;
+icon `weight.png` (192, from variable-weight-charges `docs/assets/app-icon-512.png`). Aside: "a fourth is in review".
+After approval: swap the status row for Install → the App Store URL, add JSON-LD + og.png icon, sitemap date.
+
 ## 2026-11-01 — Italian page /it/ (STATUS: ready, not yet pushed)
 
 `it/index.html` (lang it, informal tu, translated from es): EU Compliance Kit card first and in full (links eucompliance /it and
