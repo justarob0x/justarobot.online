@@ -2,6 +2,11 @@
 
 ## 2026-11-10 — Listing videos service (STATUS: live on push)
 
+Later 10 Nov (Bill): main sample = EU Compliance Kit (`videos/eucompliance.mp4` 720p from app-promos out/eucompliance-promo.mp4,
+poster = its YouTube thumbnail, "Carefree" MacLeod credit, caption links eucompliance.justarobot.online); VideoObject + og/twitter
+image follow it. "More of our listing videos" gallery: 7 cards, thumbnails self-hosted in `videos/thumbs/` (from YouTube maxres;
+E-Rechnung = frame at 15 s of the render), links to YouTube. CutSheetPro sample files removed (471ab6c, 770464a).
+
 `/videos/` sales page: one plan, $199 pilot ("$249 after that", no was/now claim), 2 rounds + $20 per extra round, contact
 support+videos@, MacLeod credit under the sample, Service + VideoObject JSON-LD, og/twitter tags, "Try the demo" link to
 review.justarobot.online (read-only demo). Homepage (EN only): aside link, "For app makers" section (`.group` heading in
