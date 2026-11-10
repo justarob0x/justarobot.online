@@ -5,7 +5,10 @@
 `/videos/` sales page: one plan, $199 pilot ("$249 after that", no was/now claim), 2 rounds + $20 per extra round, contact
 support+videos@, MacLeod credit under the sample, Service + VideoObject JSON-LD, og/twitter tags, "Try the demo" link to
 review.justarobot.online (read-only demo). Homepage (EN only): aside link, "For app makers" section (`.group` heading in
-site.css, `videos/icon.svg`), meta/og/twitter descriptions + Service in the JSON-LD graph. DE/ES/IT pages not touched.
+site.css, `videos/icon.svg`), meta/og/twitter descriptions + Service in the JSON-LD graph. DE (Sie), ES (usted), IT (tu):
+same section translated, aside link, Service JSON-LD; DE meta descriptions too (ES/IT descriptions stay Kit-focused); prices with
+&nbsp;USD; link says the sales page is in English (2f4e106). All languages carry "Already have a video?…" for replacing weak videos;
+/videos/ has the FAQ "I already have a video. Is this for me?".
 Review app and service details: app-promos/NEXT.md.
 
 ## 2026-11-04 — Variable W&C card, marked "in review" (STATUS: live on push)
