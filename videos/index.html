@@ -59,6 +59,8 @@
   .gallery a:hover img { transform: translateY(-2px); }
   .gallery b { display: block; font-weight: 600; font-size: 0.95rem; margin-top: 0.5rem; }
   .gallery span { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-soft); }
+  .gallery .tile { display: grid; place-items: center; box-sizing: border-box; aspect-ratio: 16 / 9; padding: 0.75rem; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 600; text-align: center; text-wrap: balance; transition: transform 0.15s ease; }
+  .gallery a:hover .tile { transform: translateY(-2px); filter: brightness(1.1); }
   @media (max-width: 760px) {
     .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .rows li { grid-template-columns: 1fr; }
@@ -98,6 +100,7 @@
         <li><a href="https://youtu.be/NbtlJ_2LeM8" target="_blank" rel="noopener"><img src="thumbs/lucid.jpg" alt="LUCID Verpackungsgesetz Report listing video" width="640" height="360" loading="lazy"><b>LUCID Report</b><span>German · 43 s</span></a></li>
         <li><a href="https://youtu.be/uDrlO5F5xFI" target="_blank" rel="noopener"><img src="thumbs/buchungsstapel.jpg" alt="Buchungsstapel video" width="640" height="360" loading="lazy"><b>Buchungsstapel</b><span>German · 41 s</span></a></li>
         <li><a href="https://youtu.be/wE1pBTlVbDk" target="_blank" rel="noopener"><img src="thumbs/erechnung.jpg" alt="E-Rechnung video" width="640" height="360" loading="lazy"><b>E-Rechnung</b><span>German · 44 s</span></a></li>
+        <li><a href="https://review.justarobot.online/r/32b3d31048fa05829647141f3a9f9b10" target="_blank" rel="noopener"><div class="tile">See the build workflow →</div><b>Your review page</b><span>Live demo</span></a></li>
       </ul>
       <p class="cap">Opens on YouTube. Need your video in German or Spanish as well? Ask us.</p>
     </section>
