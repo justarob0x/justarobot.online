@@ -16,6 +16,13 @@ same section translated, aside link, Service JSON-LD; DE meta descriptions too (
 /videos/ has the FAQ "I already have a video. Is this for me?".
 Review app and service details: app-promos/NEXT.md.
 
+## 2026-11-11 — Variable W&C card: "in review" → "coming soon" (STATUS: live on push)
+
+Shopify moved the app back to Draft on 11 Nov (new submission limits: every published app needs 10+ installs from
+shops on paid Shopify plans before another new app can be submitted; not a rejection). EN/DE/ES/IT: status row
+"Coming soon" / "In Kürze verfügbar" / "próximamente" / "in arrivo", the card's last sentence, and the aside
+("a fourth is coming soon"). Still no install link. After approval: as in the 4 Nov entry below.
+
 ## 2026-11-04 — Variable W&C card, marked "in review" (STATUS: live on push)
 
 Card after CutSheetPro on EN/DE (full) and ES/IT (short): sell by weight, lighter refunded / heavier invoiced separately,
