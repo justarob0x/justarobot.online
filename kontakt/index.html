@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · Universal Exporters LLC</title>
+<meta name="description" content="Kontaktformular von Universal Exporters LLC (justarobot) für alle Apps. Contact form for all justarobot apps.">
+<link rel="icon" href="/datev.png">
+<link rel="canonical" href="https://justarobot.online/kontakt/">
+<link rel="stylesheet" href="/site.css">
+<style>.legal{max-width:44rem;margin:2rem 0 3rem;line-height:1.55}.legal h1{font-size:1.8rem;margin:0 0 1rem}.legal h2{font-size:1.15rem;margin:1.8rem 0 .5rem}
+form{display:grid;gap:.9rem;margin:1.2rem 0}label{display:grid;gap:.3rem;font-weight:600}input,textarea{font:inherit;padding:.5rem .6rem;border:1px solid currentColor;border-radius:4px;background:transparent;color:inherit}
+textarea{min-height:9rem}button{font:inherit;font-weight:600;padding:.6rem 1.2rem;justify-self:start;cursor:pointer}.hp{position:absolute;left:-9999px}
+.note{padding:.7rem .9rem;border:1px solid currentColor;border-radius:4px;margin:1rem 0}.small{font-size:.9rem;opacity:.85}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <span><a href="/">Universal Exporters LLC</a></span>
+    <span><a href="/">English</a> · <a href="/de/" hreflang="de" lang="de">Deutsch</a></span>
+  </header>
+  <main class="legal">
+<h1>Kontakt / Contact</h1>
+<p>Für Fragen zu allen Apps von justarobot (Universal Exporters LLC). Antwort in der Regel innerhalb eines Werktags.<br>
+<span lang="en">For questions about any justarobot app. We usually answer within one working day.</span></p>
+<p id="ok" class="note" hidden>Danke, Ihre Nachricht ist angekommen. Wir antworten an die angegebene E-Mail-Adresse.<br><span lang="en">Thank you, your message has arrived. We will reply to the e-mail address you gave.</span></p>
+<p id="err" class="note" hidden></p>
+<form method="post" action="https://kuendigungsbutton.justarobot.online/contact">
+  <label>Name <span class="small">(optional)</span><input name="name" maxlength="200" autocomplete="name"></label>
+  <label>E-Mail *<input name="email" type="email" maxlength="254" required autocomplete="email"></label>
+  <label>App <span class="small">(optional, z. B. / e.g. German Invoices, Export für DATEV)</span><input name="app" maxlength="100"></label>
+  <label>Nachricht / Message *<textarea name="message" maxlength="5000" minlength="5" required></textarea></label>
+  <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+  <button type="submit">Senden / Send</button>
+</form>
+<p>Oder per E-Mail / or by e-mail: <a href="mailto:ops@justarobot.online">ops@justarobot.online</a></p>
+<h2>Datenschutz / Privacy</h2>
+<p class="small">Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO, sonst lit. f).
+Das Formular wird von unserem Server bei Railway (EU) entgegengenommen und nicht gespeichert, sondern per E-Mail über
+Resend (USA) an unser Postfach bei Zoho (USA) gesendet; beide auf Grundlage von Standardvertragsklauseln. Die E-Mail
+bewahren wir bis 24 Monate nach Abschluss der Anfrage auf. Ihre Rechte nach Art. 15–21 DSGVO können Sie unter der oben
+genannten Adresse geltend machen.<br>
+<span lang="en">We use your details only to answer your request (Art. 6(1)(b) GDPR, otherwise (f)). Our server at Railway
+(EU) receives the form without storing it and sends it by e-mail through Resend (USA) to our mailbox at Zoho (USA),
+both under Standard Contractual Clauses. We keep the e-mail for up to 24 months after the request is closed. You can
+exercise your rights under Art. 15–21 GDPR at the address above.</span></p>
+  </main>
+  <footer class="plate">
+    <span>Universal Exporters LLC</span>
+    <span>10006 Rolke Rd, Houston, TX 77099, United States</span>
+    <a href="/impressum">Impressum</a>
+  </footer>
+</div>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.has("gesendet")) document.getElementById("ok").hidden = false;
+const msg = { eingabe: "Bitte eine gültige E-Mail-Adresse und eine Nachricht angeben. / Please give a valid e-mail address and a message.",
+  limit: "Zu viele Nachrichten in kurzer Zeit. Bitte später erneut versuchen oder eine E-Mail schreiben. / Too many messages; please try again later or send an e-mail.",
+  versand: "Die Nachricht konnte nicht gesendet werden. Bitte schreiben Sie uns eine E-Mail. / The message could not be sent; please send us an e-mail." };
+if (q.get("fehler")) { const e = document.getElementById("err"); e.textContent = msg[q.get("fehler")] || msg.versand; e.hidden = false; }
+</script>
+</body>
+</html>
